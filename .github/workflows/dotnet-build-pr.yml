@@ -2,7 +2,9 @@ name: Build .NET Backend on PR
 
 on:
   pull_request:
+
     branches: [ main]
+
 
 jobs:
   build:
@@ -17,6 +19,7 @@ jobs:
      
 
       - name: Replace development's Migrations with PR branch Migrations
+
         
 
       - name: Setup .NET
@@ -29,3 +32,9 @@ jobs:
 
       - name: Build Project
     
+     
+
+    
+
+       
+
