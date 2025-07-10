@@ -2,7 +2,9 @@ name: Build .NET Backend on PR
 
 on:
   pull_request:
-    branches: [ main ]
+
+    branches: [ main]
+
 
 jobs:
   build:
@@ -17,12 +19,22 @@ jobs:
      
 
       - name: Replace development's Migrations with PR branch Migrations
+
+        
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore Dependencies
+        
+
+      - name: Build Project
+    
      
 
     
 
-      - name: Restore Dependencies
-      
-
-      - name: Build Project
        
+
