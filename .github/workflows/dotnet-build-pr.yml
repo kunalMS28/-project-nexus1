@@ -1,0 +1,31 @@
+name: Build .NET Backend on PR
+
+on:
+  pull_request:
+    branches: [ main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR Branch Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for accessing other branches like development
+
+     
+
+      - name: Replace development's Migrations with PR branch Migrations
+        
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore Dependencies
+        
+
+      - name: Build Project
+    
